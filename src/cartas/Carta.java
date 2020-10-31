@@ -4,13 +4,15 @@ public class Carta {
 
 	private String tipo;
 	private String nombre;
-	private String atributos;
+	private String descripcion;
+	private int ID;
 	private int mana;
 
-	public Carta(String tip, String nom, String att, int man) {
+	public Carta(String tip, String nom, String des, int id, int man) {
 		this.tipo = tip;
 		this.nombre = nom;
-		this.atributos = att;
+		this.descripcion = des;
+		this.ID = id;
 		this.mana = man;
 	}
 
@@ -30,12 +32,20 @@ public class Carta {
 		this.nombre = nombre;
 	}
 
-	public String getAtributos() {
-		return atributos;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setAtributos(String atributos) {
-		this.atributos = atributos;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
 	}
 
 	public int getMana() {
