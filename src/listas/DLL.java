@@ -4,6 +4,11 @@ public class DLL { // Doubly Linked List
 	private Node head;
 	private int size;
 
+	public DLL() {
+		this.head = null;
+		this.size = 0;
+	}
+
 	public void insertFirst(Object data) {
 		Node newNode = new Node(data);
 		newNode.setNext(this.head);
