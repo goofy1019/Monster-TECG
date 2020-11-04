@@ -1,4 +1,4 @@
-{
+"Cards": {
 
  	"Thundersnake": {
  		"Tipo":"Esbirro",
@@ -132,6 +132,77 @@
  		"Efecto": "EfectoSacrificaMana",
  		"Descripcion":"Sacrifice 50% of your mana, but duplicate your next attack"
  		},
+ 	"Monster Hunt":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "300",
+ 		"Efecto": "EfectoMonsterHunt",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Sacrifice 50% of your mana, but duplicate your next attack"
+ 		},
+ 	"Redraw":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "50",
+ 		"Efecto": "EfectoRedraw",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Opponent has to discard hand and draw four cards"
+ 		},
+ 	"Monster Switch":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "100",
+ 		"Efecto": "EfectoMonsterSwitch",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Swap the attacking monsters attack with the lowest attacking monster in your hand"
+ 		},
+ 	"Freeze Defense":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "300",
+ 		"Efecto": "EfectoFreezeDefense",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Sacrifice 50% of your mana, but duplicate your next attack"
+ 		},
+ 	"Counter Strike":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoCounterStrike",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Make the opponent take the damage of their attack"
+ 		},
+ 	"Damage Multiplier":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "100",
+ 		"Efecto": "EfectoDamageMultiplier",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Double your attack next round"
+ 		},
+ 	"Shield":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "100",
+ 		"Efecto": "EfectoShield",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Receive half of the damage inflicted by attacking monster"
+ 		},
+ 	"Blast Shield":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "250",
+ 		"Efecto": "EfectoBlastShield",
+ 		"Evento": "IncomingAttack",
+ 		"Descripcion":"Take no damage from your opponent´s attack"
+ 		},
+ 	"Last Stand":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoLastStand",
+ 		"Evento": "LowHealth",
+ 		"Descripcion":"Attack max, once with every monster you have in play without using any mana"
+ 		},
+ 	"Aether Mumbler":{
+ 		"Tipo": "Secreto",
+ 		"Mana": "600",
+ 		"Efecto": "EfectoEatherMumbler",
+ 		"Evento": "Mumblers placed",
+ 		"Descripcion":"Summon the all-mighty Aether Mumbler and instantly defeat your opponent wining the game. No cards can negate this effect"
+ 		},
+ 	}
  	
  	
  	
