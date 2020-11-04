@@ -1,0 +1,141 @@
+{
+
+ 	"Thundersnake": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"50",
+ 		"Ataque": "75",
+ 		"Description":"A snake born from Zeus' thoughts."
+ 		
+ 		},
+ 	"Dreadman": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"50",
+ 		"Ataque": "75",
+ 		"Description":"This man has been dreading the fact that he killed his wife 1000 years ago and roams the Earth in penitence for his actions"
+ 		
+ 		},
+ 	"Grim Wraith": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"100",
+ 		"Ataque": "85",
+ 		"Description":"A wraith sent to Earth by accident"
+ 		
+ 		},
+ 	"Crimson Ghost": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"150",
+ 		"Ataque": "95",
+ 		"Description":"A ghost whose opponents blood has made him crimson colored"
+ 		
+ 		},
+ 	"Metalflayer": {	
+ 		"Tipo":"Esbirro",
+ 		"Mana":"200",
+ 		"Ataque": "100",
+ 		"Description":"A robot sent to kill all other machinery on Earth"
+ 		
+ 		},
+ 	"HellHound": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"200",
+ 		"Ataque": "100",
+ 		"Description":"Hade's own dog has come for dinner"
+ 		
+ 		},
+ 	"Gutwrencher": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"250",
+ 		"Ataque": "150",
+ 		"Description":"This fiend likes only one dish. Guts. Best served fresh"
+ 		
+ 		},
+ 		
+ 	"Corrupt Mumbler": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"100",
+ 		"Ataque": "50",
+ 		"Description":"First of three worshipers looking for their savior."
+ 		
+ 		},
+ 		
+ 	"Awful Mumbler": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"100",
+ 		"Ataque": "50",
+ 		"Description":"Second of three worshipers looking for their savior"
+ 		
+ 		},
+ 	"Weird Mumbler": {
+ 		"Tipo":"Esbirro",
+ 		"Mana":"100",
+ 		"Ataque": "50",
+ 		"Description":"Third of three worshipers looking for their savior"
+ 		
+ 		},
+ 	"Freeze":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "100",
+ 		"Efecto": "EfectoCongelar",
+ 		"Description":"The oponent can not attack next turn"
+ 		},
+ 	"Small Heart":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "50",
+ 		"Efecto": "EfectoCurarPoco",
+ 		"Description":"Recover 25% of your health"
+ 		},
+ 	"Heart":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "100",
+ 		"Efecto": "EfectoCurarMedio",
+ 		"Description":"Recover 50% of your health"
+ 		},
+ 	"Big Heart":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoCurarMax",
+ 		"Description":"Double your health"
+ 		},
+ 	"Supreme Power":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "450",
+ 		"Efecto": "EfectoPoderSupremo",
+ 		"Descripcion":"On next turn, player can use 3 cards without spending mana"
+ 		},
+ 	"Thief":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoRobarCarta",
+ 		"Descripcion":"Steal a random card from your oponent"
+ 		},
+ 	"Jumper":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoSaltarTurno",
+ 		"Descripcion":"Skip your oponent's next turn"
+ 		},
+ 	"Mana retrieval":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "200",
+ 		"Efecto": "EfectoRobarMana",
+ 		"Descripcion":"Steal 50% of your oponent's mana"
+ 		},
+ 	"Power Eye":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "450",
+ 		"Efecto": "EfectoRevelaMano",
+ 		"Descripcion":"Reveal your oponent's hand"
+ 		},
+ 	"Mana Seppuki":{
+ 		"Tipo": "Hechizo",
+ 		"Mana": "0.5",
+ 		"Efecto": "EfectoSacrificaMana",
+ 		"Descripcion":"Sacrifice 50% of your mana, but duplicate your next attack"
+ 		},
+ 	
+ 	
+ 	
+ 	
+ 	
+ 		
+ 	
