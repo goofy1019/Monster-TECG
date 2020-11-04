@@ -4,37 +4,45 @@ public class DLL { // Doubly Linked List
 	private Node head;
 	private int size;
 
+	// agregar funcion find node
+
 	public DLL() {
-		this.head = null;
+		this.setHead(null);
 		this.size = 0;
+	}
+
+	public int size() {
+		return this.size;
 	}
 
 	public void insertFirst(Object data) {
 		Node newNode = new Node(data);
-		newNode.setNext(this.head);
+		newNode.setNext(this.getHead());
 		newNode.setPrev(null);
-		if (this.head != null) {
-			this.head.setPrev(newNode);
+		if (this.getHead() != null) {
+			this.getHead().setPrev(newNode);
+		} else {
+			this.setHead(newNode);
+			this.size++;
 		}
-		this.head = newNode;
-		this.size++;
 	}
 
 	public void insertLast(Object data) {
 		Node newNode = new Node(data);
-		Node last = this.head;
+		Node last = this.getHead();
 		newNode.setNext(null);
-		if (head == null) {
+		if (this.getHead() == null) {
 			newNode.setPrev(null);
-			this.head = newNode;
-			return;
+			this.setHead(newNode);
+		} else {
+			while (last.getNext() != null) {
+				last = last.getNext();
+			}
+			last.setNext(newNode);
+			newNode.setPrev(last);
+			this.size++;
 		}
-		while (last.getNext() != null) {
-			last = last.getNext();
-		}
-		last.setNext(newNode);
-		newNode.setPrev(last);
-		this.size++;
+
 	}
 
 	public void insertAfter(Node prev_Node, Object data) {
@@ -50,6 +58,26 @@ public class DLL { // Doubly Linked List
 			newNode.getNext().setPrev(newNode);
 		}
 	}
+	
+	public void delNode(Object searchValue) {
+		Node current = this.head;
+		Node previous = this.head;
+		while (current != null) {
+			if (current.getData().equals(searchValue)) {
+				if (current == this.head) {
+					this.head = this.head.getNext();
+				} else {
+					previous.setNext(current.getNext());
+				}
+				this.size--;
+				return;
+			} else {
+				previous = current;
+				current = current.getNext();
+			}
+		}
+		return;
+	}
 
 	public void printList(Node node) {
 		Node last = null;
@@ -62,9 +90,35 @@ public class DLL { // Doubly Linked List
 		System.out.println();
 		System.out.println("Recorrido der-izq");
 		while (last != null) {
-			System.out.print(last.getData() + " ");
+			System.out.print(last.getData().toString() + " ");
 			last = last.getPrev();
 		}
+	}
+
+	public void printList() {
+		Node current = this.getHead();
+		while (current != null) {
+			System.out.println(current.getData().toString());
+			current = current.getNext();
+		}
+	}
+	
+	public Object getNode(int pos) {
+		int contador = 1;
+		Node current = this.getHead();
+		while (pos != contador) {
+			current = current.getNext();
+			contador ++;
+		}
+		return current.getData();
+	}
+
+	public Node getHead() {
+		return head;
+	}
+
+	public void setHead(Node head) {
+		this.head = head;
 	}
 
 }

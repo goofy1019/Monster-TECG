@@ -2,7 +2,15 @@ package listas;
 
 public class CircularList {
 	private Node start;
-	private int size;
+	public int size;
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
 
 	public CircularList() {
 		this.start = null;
@@ -16,13 +24,14 @@ public class CircularList {
 			newNode.setPrev(newNode);
 			this.start = newNode;
 			return;
+		}else {
+			Node last = this.start.getPrev();
+			newNode.setNext(this.start);
+			this.start.setPrev(newNode);
+			newNode.setPrev(last);
+			last.setNext(newNode);
+			this.setSize(size + 1);
 		}
-		Node last = this.start.getPrev();
-		newNode.setNext(this.start);
-		this.start.setPrev(newNode);
-		newNode.setPrev(last);
-		last.setNext(newNode);
-		this.size++;
 	}
 
 	public void insertFirst(Object data) {
@@ -32,14 +41,15 @@ public class CircularList {
 			newNode.setPrev(newNode);
 			this.start = newNode;
 			return;
+		}else {
+			Node last = this.start.getPrev();
+			newNode.setNext(this.start);
+			newNode.setPrev(last);
+			last.setNext(newNode);
+			this.start.setPrev(newNode);
+			this.start = newNode;
+			this.setSize(size + 1);
 		}
-		Node last = this.start.getPrev();
-		newNode.setNext(this.start);
-		newNode.setPrev(last);
-		last.setNext(newNode);
-		this.start.setPrev(newNode);
-		this.start = newNode;
-		this.size++;
 	}
 
 	public void insertAfter(Node prev_Node, Object data) {
@@ -53,43 +63,64 @@ public class CircularList {
 		newNode.setPrev(temp);
 		newNode.setNext(next);
 		next.setPrev(newNode);
-		this.size++;
+		this.setSize(size + 1);
 	}
 
 	public void delNode(Object data) {
 		if (this.start == null) {
 			return;
-		}
-		Node current = this.start;
-		Node prev_1 = null;
-		while (current.getData() != data) {
-			if (current.getNext() == this.start) {
-				System.out.printf("\nList doesn't have node with value = %d", data);
+		}else {
+			Node current = this.start;
+			Node prev_1 = null;
+			while (current.getData() != data) {
+				if (current.getNext() == this.start) {
+					System.out.printf("\nList doesn't have node with value = %d", data);
+					return;
+				}else {
+					prev_1 = current;
+					current = current.getNext();
+				}
+			}
+			if (current.getNext() == this.start && prev_1 == null) {
+				(this.start) = null;
 				return;
 			}
-			prev_1 = current;
-			current = current.getNext();
-		}
-		if (current.getNext() == this.start && prev_1 == null) {
-			(this.start) = null;
+			else if (current == this.start) {
+				prev_1 = this.start;
+				this.start = this.start.getNext();
+				prev_1.setNext(this.start);
+				this.start.setPrev(prev_1);
+			} else if (current.getNext() == this.start) {
+				prev_1.setNext(this.start);
+				this.start.setPrev(prev_1);
+			} else {
+				Node temp = current.getNext();
+				prev_1.setNext(temp);
+				temp.setPrev(prev_1);
+			}
 			return;
 		}
-		if(current == this.start) {
-			prev_1 = this.start;
-			this.start = this.start.getNext();
-			prev_1.setNext(this.start);
-			this.start.setPrev(prev_1);
+		
+	}
+	
+	public Object getNode(int pos) {
+		int contador = 1;
+		Node current = this.start;
+		while (pos != contador) {
+			current = current.getNext();
+			contador ++;
 		}
-		else if(current.getNext() == this.start) {
-			prev_1.setNext(this.start);
-			this.start.setPrev(prev_1);
+		return current.getData();
+	}
+	
+	public void printList() {
+		Node current = this.start;
+		Node last = this.start.getPrev();
+		while (current.getNext() != this.start) {
+			System.out.println(current.getData().toString());
+			current = current.getNext();
 		}
-		else {
-			Node temp = current.getNext();
-			prev_1.setNext(temp);
-			temp.setPrev(prev_1);
-		}
-		return;
+		System.out.println(current.getData().toString());
 	}
 
 }

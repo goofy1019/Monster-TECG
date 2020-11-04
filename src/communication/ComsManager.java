@@ -19,13 +19,4 @@ public class ComsManager {
 
 	}
 
-	public ComsManager(String ip, int PORT) {
-		while(true) {
-			try {
-				player = new 
-			}
-		}
-		
-	}
-
 }
