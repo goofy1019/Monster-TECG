@@ -3,9 +3,11 @@ package listas;
 public class Node {
 	private Object data;
 	private Node next;
+	private Node prev;
 
 	public Node(Object data) {
 		this.next = null;
+		this.prev = null;
 		this.data = data;
 	}
 
@@ -23,6 +25,14 @@ public class Node {
 
 	public void setNext(Node node) {
 		this.next = node;
+	}
+
+	public Node getPrev() {
+		return prev;
+	}
+
+	public void setPrev(Node prev) {
+		this.prev = prev;
 	}
 
 }
