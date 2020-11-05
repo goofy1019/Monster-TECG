@@ -5,6 +5,14 @@ import java.net.Socket;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;
 
+/**
+ * 
+ * @author Abner Arroyo y Adolfo Amador
+ * 
+ * This class is inherited from ServerSocket. It is the way the ComsManager will create the player if the user
+ * selects to play as Host
+ *
+ */
 public class HostPlayer extends ServerSocket{
 
 	private Socket socket = null;
@@ -19,13 +27,20 @@ public class HostPlayer extends ServerSocket{
 		
 		
 	}
-	
+	/**
+	 * Getter for the DataInputStream
+	 * @return dis
+	 */
 	public DataInputStream getDis() {
-		return dis;
+		return this.dis;
 	}
 
+	/**
+	 * Getter for the DataOutputStream
+	 * @return dos
+	 */
 	public DataOutputStream getDos() {
-		return dos;
+		return this.dos;
 	}
 
 }
