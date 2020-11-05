@@ -10,6 +10,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
+ * This class' purpose is to manage the .json files. 
+ * It provides a way of building JsonNodes and classes out of .json files and viceversa
  * 
  * @author Abner Arroyo y Adolfo Amador
  *
