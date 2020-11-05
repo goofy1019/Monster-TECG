@@ -9,7 +9,7 @@ import java.io.DataInputStream;
  * 
  * @author Abner Arroyo y Adolfo Amador
  * 
- * This class is inherited from ServerSocket. It is the way the ComsManager will create the player if the user
+ * This class is inherited from ServerSocket. It creates a ServerSOcket and ONE socket with a client (the guest).It is the way the ComsManager will create the player if the user
  * selects to play as Host
  *
  */

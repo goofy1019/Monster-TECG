@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 
+/**
+ * 
+ * @author Abner Arroyo y Adolfo Amador
+ * This class is inherited from Socket. It is the way the ComsManager will create the player if the user
+ * selects to play as Guest. It creates a socket to connect with player that chose to be host. 
+ */
 
 public class GuestPlayer extends Socket{
 	private DataInputStream dis;
@@ -17,12 +23,21 @@ public class GuestPlayer extends Socket{
 		this.dos = new DataOutputStream(this.getOutputStream());
 		
 	}
+	
+	/**
+	 * 
+	 * @return dis
+	 */
 	public DataInputStream getDis() {
-		return dis;
+		return this.dis;
 	}
 
+	/**
+	 * 
+	 * @return dos
+	 */
 	public DataOutputStream getDos() {
-		return dos;
+		return this.dos;
 	}
 
 
