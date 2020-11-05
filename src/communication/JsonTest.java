@@ -29,6 +29,7 @@ public class JsonTest {
 			 
 			 //Parse Json Node
 			 JsonNode node = Json.parse(jsonString);
+			 System.out.println(node.get("glossary").get("title").asText());
 		} catch (Exception e){
 			e.printStackTrace();
 		}

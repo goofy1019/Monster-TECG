@@ -19,5 +19,13 @@ public class HostPlayer extends ServerSocket{
 		
 		
 	}
+	
+	public DataInputStream getDis() {
+		return dis;
+	}
+
+	public DataOutputStream getDos() {
+		return dos;
+	}
 
 }
