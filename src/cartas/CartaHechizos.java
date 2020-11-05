@@ -4,8 +4,8 @@ public class CartaHechizos extends Carta {
 
 	public Object efecto;
 
-	protected CartaHechizos(String tip, String nom, String des, int id, int man, Object ef) {
-		super(tip, nom, des, id, man);
+	protected CartaHechizos(boolean stat, String tip, String nom, String des, int id, int man, Object ef) {
+		super(stat, tip, nom, des, id, man);
 		this.efecto = ef;
 	}
 
@@ -59,24 +59,24 @@ public class CartaHechizos extends Carta {
 		// da mana a cambio de mas ataque
 	}
 
-	static CartaHechizos Hechizo1 = new CartaHechizos("Hechizo", "Freeze", "Congela a oponente", 11, 100,
+	static CartaHechizos Hechizo1 = new CartaHechizos(false, "Hechizo", "Freeze", "Congela a oponente", 11, 100,
 			EfectoCongelar());
-	static CartaHechizos Hechizo2 = new CartaHechizos("Hechizo", "Small Heart", "Cura poco", 12, 50, EfectoCurarPoco());
-	static CartaHechizos Hechizo3 = new CartaHechizos("Hechizo", "Heart", "Cura medio", 13, 100,
+	static CartaHechizos Hechizo2 = new CartaHechizos(false, "Hechizo", "Small Heart", "Cura poco", 12, 50, EfectoCurarPoco());
+	static CartaHechizos Hechizo3 = new CartaHechizos(false, "Hechizo", "Heart", "Cura medio", 13, 100,
 			EfectoCurarMedio());
-	static CartaHechizos Hechizo4 = new CartaHechizos("Hechizo", "Big Heart", "Cura mucho", 14, 200,
+	static CartaHechizos Hechizo4 = new CartaHechizos(false, "Hechizo", "Big Heart", "Cura mucho", 14, 200,
 			EfectoCurarMax());
-	static CartaHechizos Hechizo5 = new CartaHechizos("Hechizo", "Supreme Power",
+	static CartaHechizos Hechizo5 = new CartaHechizos(false, "Hechizo", "Supreme Power",
 			"Siguiente turno se puede invocar 3 cartas consecutivas sin importar mana", 15, 450, EfectoPoderSupremo());
-	static CartaHechizos Hechizo6 = new CartaHechizos("Hechizo", "Thief", "Roba carta aleatoria", 16, 200,
+	static CartaHechizos Hechizo6 = new CartaHechizos(false, "Hechizo", "Thief", "Roba carta aleatoria", 16, 200,
 			EfectoRobarCarta());
-	static CartaHechizos Hechizo7 = new CartaHechizos("Hechizo", "Jumper", "Salta prox turno de oponente", 17,
+	static CartaHechizos Hechizo7 = new CartaHechizos(false, "Hechizo", "Jumper", "Salta prox turno de oponente", 17,
 			200, EfectoSaltarTurno());
-	static CartaHechizos Hechizo8 = new CartaHechizos("Hechizo", "Mana Retrieval", "Roba mana aleatoria del oponente", 18,
+	static CartaHechizos Hechizo8 = new CartaHechizos(false, "Hechizo", "Mana Retrieval", "Roba mana aleatoria del oponente", 18,
 			200, EfectoRobarMana());
-	static CartaHechizos Hechizo9 = new CartaHechizos("Hechizo", "Power Eye", "Revela mano del otro jugador", 19, 400,
+	static CartaHechizos Hechizo9 = new CartaHechizos(false, "Hechizo", "Power Eye", "Revela mano del otro jugador", 19, 400,
 			EfectoRevelaMano());
-	static CartaHechizos Hechizo10 = new CartaHechizos("Hechizo", "Mana Seppuku",
+	static CartaHechizos Hechizo10 = new CartaHechizos(false, "Hechizo", "Mana Seppuku",
 			"Da mana pero duplica siguiente ataque", 20, 0, EfectoSacrificaMana());// definir mana requerido
 
 }

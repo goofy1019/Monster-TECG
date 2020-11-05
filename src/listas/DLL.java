@@ -1,13 +1,11 @@
 package listas;
 
 public class DLL { // Doubly Linked List
-	private Node head;
+	protected Node head;
 	private int size;
 
-	// agregar funcion find node
-
 	public DLL() {
-		this.setHead(null);
+		this.head = null;;
 		this.size = 0;
 	}
 
@@ -17,23 +15,24 @@ public class DLL { // Doubly Linked List
 
 	public void insertFirst(Object data) {
 		Node newNode = new Node(data);
-		newNode.setNext(this.getHead());
+		newNode.setNext(this.head);
 		newNode.setPrev(null);
-		if (this.getHead() != null) {
-			this.getHead().setPrev(newNode);
+		if (this.head != null) {
+			this.head.setPrev(newNode);
+			this.head = newNode;
 		} else {
-			this.setHead(newNode);
+			this.head = newNode;
 			this.size++;
 		}
 	}
 
 	public void insertLast(Object data) {
 		Node newNode = new Node(data);
-		Node last = this.getHead();
+		Node last = this.head;
 		newNode.setNext(null);
-		if (this.getHead() == null) {
+		if (this.head == null) {
 			newNode.setPrev(null);
-			this.setHead(newNode);
+			this.head = newNode;
 		} else {
 			while (last.getNext() != null) {
 				last = last.getNext();
@@ -78,6 +77,10 @@ public class DLL { // Doubly Linked List
 		}
 		return;
 	}
+	
+	public void delFirst() {
+		this.head = this.head.getNext();
+	}
 
 	public void printList(Node node) {
 		Node last = null;
@@ -96,7 +99,7 @@ public class DLL { // Doubly Linked List
 	}
 
 	public void printList() {
-		Node current = this.getHead();
+		Node current = this.head;
 		while (current != null) {
 			System.out.println(current.getData().toString());
 			current = current.getNext();
@@ -105,20 +108,12 @@ public class DLL { // Doubly Linked List
 	
 	public Object getNode(int pos) {
 		int contador = 1;
-		Node current = this.getHead();
+		Node current = this.head;
 		while (pos != contador) {
 			current = current.getNext();
 			contador ++;
 		}
 		return current.getData();
-	}
-
-	public Node getHead() {
-		return head;
-	}
-
-	public void setHead(Node head) {
-		this.head = head;
 	}
 
 }

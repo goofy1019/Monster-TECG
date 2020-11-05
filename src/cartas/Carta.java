@@ -7,13 +7,23 @@ public class Carta {
 	private String descripcion;
 	private int ID;
 	private int mana;
+	private boolean status;
 
-	public Carta(String tip, String nom, String des, int id, int man) {
+	public Carta(boolean stat, String tip, String nom, String des, int id, int man) {
+		this.status = stat;
 		this.tipo = tip;
 		this.nombre = nom;
 		this.descripcion = des;
 		this.ID = id;
 		this.mana = man;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
 	}
 
 	public String getTipo() {
