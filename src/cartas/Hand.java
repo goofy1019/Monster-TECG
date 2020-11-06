@@ -43,5 +43,9 @@ public class Hand extends Deck{
 		}
 	}
 	
+	public void delCard(Object carta) {
+		hand.delNode(carta);
+	}
+	
 
 }
