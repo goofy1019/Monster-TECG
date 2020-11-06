@@ -19,19 +19,20 @@ public class ComsManager {
 	DataInputStream dis;
 	
 	/**
-	 * Constructor with port as parameter. It is created this way if the user selects to play as guest. It sets the 
+	 * Constructor with port as parameter. It is created this way if the user selects to play as host. It sets the 
 	 * Data output and input streams to math the selected player (Host or Guest)
 	 * @param PORT
 	 * @throws IOException
 	 */
+
 	public ComsManager(int PORT) throws IOException {
-		while(true) {
+		while (true) {
 			try {
 				this.hplayer = new HostPlayer(PORT);
 				this.dos = hplayer.getDos();
 				this.dis = hplayer.getDis();
 				break;
-			} catch (IOException e){
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
@@ -56,9 +57,9 @@ public class ComsManager {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}	
+		}
 	}
-	
+
 	/**
 	 * This method sends a message through the DataOutPutStream
 	 * 

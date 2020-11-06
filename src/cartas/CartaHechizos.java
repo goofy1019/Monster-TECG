@@ -4,77 +4,79 @@ public class CartaHechizos extends Carta {
 
 	public Object efecto;
 
-	protected CartaHechizos(String tip, String nom, String des, int id, int man, Object ef) {
-		super(tip, nom, des, id, man);
+	protected CartaHechizos(boolean stat, String tip, String nom, String des, int id, int man, Object ef) {
+		super(stat, tip, nom, des, id, man);
 		this.efecto = ef;
 	}
 
-	public Object EfectoCongelar() {
+	public static Object EfectoCongelar() {
 		return null;
 		// contrincante no puede atacar prox ronda
 	}
 
-	public Object EfectoCurarPoco() {
+	public static Object EfectoCurarPoco() {
 		return null;
 		// recuperar poca vida
 	}
 
-	public Object EfectoCurarMedio() {
+	public static Object EfectoCurarMedio() {
 		return null;
 		// recuperar media vida
 	}
 
-	public Object EfectoCurarMax() {
+	public static Object EfectoCurarMax() {
 		return null;
 		// recuperar mucha vida
 	}
 
-	public Object EfectoPoderSupremo() {
+	public static Object EfectoPoderSupremo() {
 		return null;
 		// siguiente turno se puede invocar 3 cartas consecutivas sin importar mana
 	}
 
-	public Object EfectoRobarCarta() {
+	public static Object EfectoRobarCarta() {
 		return null;
 		// roba carta aleatoria del otro jugador
 	}
 
-	public Object EfectoSaltarTurno() {
+	public static Object EfectoSaltarTurno() {
 		return null;
 		// salta por completo turno del otro jugador, version mas potente de congelar
 	}
 
-	public Object EfectoRobarMana() {
+	public static Object EfectoRobarMana() {
 		return null;
 		// roba cantidad aleatoria de mana del otro jugador
 	}
 
-	public Object EfectoRevelaMano() {
+	public static Object EfectoRevelaMano() {
 		return null;
 		// revela la mano del oponente
 	}
 
-	public Object EfectoSacrificaMana() {
+	public static Object EfectoSacrificaMana() {
 		return null;
 		// da mana a cambio de mas ataque
 	}
 
-	CartaHechizos Congelar = new CartaHechizos("Hechizo", "Congelamiento", "Congela a oponente", 11, 100,
+	static CartaHechizos Hechizo1 = new CartaHechizos(false, "Hechizo", "Freeze", "Congela a oponente", 11, 100,
 			EfectoCongelar());
-	CartaHechizos CurarPoco = new CartaHechizos("Hechizo", "Curar Poco", "Cura poco", 12, 50, EfectoCurarPoco());
-	CartaHechizos CurarMedio = new CartaHechizos("Hechizo", "Curar Medio", "Cura medio", 13, 100, EfectoCurarMedio());
-	CartaHechizos CurarMax = new CartaHechizos("Hechizo", "Curar Mucho", "Cura mucho", 14, 200, EfectoCurarMax());
-	CartaHechizos PoderSupremo = new CartaHechizos("Hechizo", "Poder Supremo",
+	static CartaHechizos Hechizo2 = new CartaHechizos(false, "Hechizo", "Small Heart", "Cura poco", 12, 50, EfectoCurarPoco());
+	static CartaHechizos Hechizo3 = new CartaHechizos(false, "Hechizo", "Heart", "Cura medio", 13, 100,
+			EfectoCurarMedio());
+	static CartaHechizos Hechizo4 = new CartaHechizos(false, "Hechizo", "Big Heart", "Cura mucho", 14, 200,
+			EfectoCurarMax());
+	static CartaHechizos Hechizo5 = new CartaHechizos(false, "Hechizo", "Supreme Power",
 			"Siguiente turno se puede invocar 3 cartas consecutivas sin importar mana", 15, 450, EfectoPoderSupremo());
-	CartaHechizos RobarCarta = new CartaHechizos("Hechizo", "Robar Carta", "Roba carta aleatoria", 16, 200,
+	static CartaHechizos Hechizo6 = new CartaHechizos(false, "Hechizo", "Thief", "Roba carta aleatoria", 16, 200,
 			EfectoRobarCarta());
-	CartaHechizos SaltarTurno = new CartaHechizos("Hechizo", "Saltar Turno", "Salta prox turno de oponente", 17, 200,
-			EfectoSaltarTurno());
-	CartaHechizos RobarMana = new CartaHechizos("Hechizo", "Robar Mana", "Roba mana aleatoria del oponente", 18, 200,
-			EfectoRobarMana());
-	CartaHechizos RevelaMano = new CartaHechizos("Hechizo", "Revela Mano", "Revela mano del otro jugador", 19, 400,
+	static CartaHechizos Hechizo7 = new CartaHechizos(false, "Hechizo", "Jumper", "Salta prox turno de oponente", 17,
+			200, EfectoSaltarTurno());
+	static CartaHechizos Hechizo8 = new CartaHechizos(false, "Hechizo", "Mana Retrieval", "Roba mana aleatoria del oponente", 18,
+			200, EfectoRobarMana());
+	static CartaHechizos Hechizo9 = new CartaHechizos(false, "Hechizo", "Power Eye", "Revela mano del otro jugador", 19, 400,
 			EfectoRevelaMano());
-	CartaHechizos SacrificaMana = new CartaHechizos("Hechizo", "Sacrifica Mana",
+	static CartaHechizos Hechizo10 = new CartaHechizos(false, "Hechizo", "Mana Seppuku",
 			"Da mana pero duplica siguiente ataque", 20, 0, EfectoSacrificaMana());// definir mana requerido
 
 }

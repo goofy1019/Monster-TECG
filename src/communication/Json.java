@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 /**
  * This class' purpose is to manage the .json files. 
  * It provides a way of building JsonNodes and classes out of .json files and viceversa
@@ -16,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Abner Arroyo y Adolfo Amador
  *
  */
+
 public class Json {
 	private static ObjectMapper objectMapper = getDefaultObjectMapper();
 	
@@ -24,6 +26,7 @@ public class Json {
 	 * 
 	 * @return Object Mapper
 	 */
+	
 	private static ObjectMapper getDefaultObjectMapper() {
 		ObjectMapper defaultObjectMapper = new ObjectMapper();
 		return defaultObjectMapper;
@@ -66,6 +69,8 @@ public class Json {
 	 * @throws JsonMappingException
 	 * @throws JsonProcessingException
 	 */
+	
+	
 	public static JsonNode parse(String JsonSource) throws JsonMappingException, JsonProcessingException {
 	
 		return objectMapper.readTree(JsonSource);

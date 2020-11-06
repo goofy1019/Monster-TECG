@@ -1,9 +1,15 @@
 package application;
 
+import cartas.CardList;
+import cartas.Deck;
+import cartas.Hand;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method
+		Player player1 = new Player();
+		
+
 	}
 
 }
