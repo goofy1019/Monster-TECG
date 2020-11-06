@@ -25,8 +25,39 @@ public class DLL { // Doubly Linked List
 			this.size++;
 		}
 	}
+	
+	public void insertFirstS(String data) {
+		Node newNode = new Node(data);
+		newNode.setNext(this.head);
+		newNode.setPrev(null);
+		if (this.head != null) {
+			this.head.setPrev(newNode);
+			this.head = newNode;
+		} else {
+			this.head = newNode;
+			this.size++;
+		}
+	}
 
 	public void insertLast(Object data) {
+		Node newNode = new Node(data);
+		Node last = this.head;
+		newNode.setNext(null);
+		if (this.head == null) {
+			newNode.setPrev(null);
+			this.head = newNode;
+		} else {
+			while (last.getNext() != null) {
+				last = last.getNext();
+			}
+			last.setNext(newNode);
+			newNode.setPrev(last);
+			this.size++;
+		}
+
+	}
+	
+	public void insertLastS(String data) {
 		Node newNode = new Node(data);
 		Node last = this.head;
 		newNode.setNext(null);
@@ -58,7 +89,41 @@ public class DLL { // Doubly Linked List
 		}
 	}
 	
+	public void insertAfterS(Node prev_Node, String data) {
+		if (prev_Node == null) {
+			System.out.println("Node cannot be null");
+			return;
+		}
+		Node newNode = new Node(data);
+		newNode.setNext(prev_Node.getNext());
+		prev_Node.setNext(newNode);
+		newNode.setPrev(prev_Node);
+		if (newNode.getNext() != null) {
+			newNode.getNext().setPrev(newNode);
+		}
+	}
+	
 	public void delNode(Object searchValue) {
+		Node current = this.head;
+		Node previous = this.head;
+		while (current != null) {
+			if (current.getData().equals(searchValue)) {
+				if (current == this.head) {
+					this.head = this.head.getNext();
+				} else {
+					previous.setNext(current.getNext());
+				}
+				this.size--;
+				return;
+			} else {
+				previous = current;
+				current = current.getNext();
+			}
+		}
+		return;
+	}
+	
+	public void delNodeS(String searchValue) {
 		Node current = this.head;
 		Node previous = this.head;
 		while (current != null) {
