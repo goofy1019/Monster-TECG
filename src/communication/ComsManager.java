@@ -68,8 +68,12 @@ public class ComsManager {
 	 * @throws IOException
 	 */
 	public String send(String message) throws IOException {
-		dos.writeUTF(message);
+		this.dos.writeUTF(message);
 		return message;
+	}
+	
+	public String read() throws IOException {
+		return this.dis.readUTF();
 	}
 	
 
